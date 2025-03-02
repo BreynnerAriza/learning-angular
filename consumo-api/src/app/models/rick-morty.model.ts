@@ -1,0 +1,11 @@
+export interface CharactersResponse {
+    results: Character []
+}
+
+export interface Character {
+    id: number,
+    name: string,
+    status: string,
+    species: string,
+    image: string
+}

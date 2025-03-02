@@ -1,0 +1,17 @@
+<div class="cards__container">
+    <div class="card" *ngFor="let character of characters">
+        <img [src]="character.image" class="card__image" alt="{{ character.name }}">
+        <div class="card__content">
+            <h2 class="card__title">{{ character.name }}</h2>
+            <p class="card__status">{{ character.status }}</p>
+            <p class="card__species">{{ character.species }}</p>
+            <button type="button" class="btn btn-primary" (click)="openModal(character)">Ver más</button>
+        </div>
+    </div>
+</div>
+
+<app-character-modal
+    *ngIf="selectedCharacter" 
+    [character]="selectedCharacter" 
+    (close)="closeModal()">
+</app-character-modal>

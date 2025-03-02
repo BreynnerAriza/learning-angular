@@ -1,0 +1,41 @@
+.cards__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 350px)); /* Máximo 350px por tarjeta */
+    gap: 16px;
+    justify-content: center; /* Centra las tarjetas si hay espacio sobrante */
+    padding-bottom: 50px;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card__image {
+    display: block;
+    width: 50%;
+    object-fit: cover;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    width: 50%;
+}
+
+.card__title {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.card__status, .card__species {
+    font-size: 1em;
+    margin-bottom: 4px;
+}

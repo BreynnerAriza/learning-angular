@@ -1,0 +1,43 @@
+<form #myForm="ngForm" [formGroup]="formularioContacto" (ngSubmit)="enviar()">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input [ngClass]="{'is-invalid' : hasError('name', 'required')}" type="email" class="form-control" id="name" aria-describedby="emailHelp" formControlName="name" required/>
+        <div class="text-danger" *ngIf="hasError('name', 'required')">
+           Nombre requerido
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input [ngClass]="{'is-invalid' : hasError('email', 'required') || hasError('email', 'email') }" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email"  required/>
+        <div class="text-danger" *ngIf="hasError('email', 'required')">
+            Email requerido
+        </div>        
+        <div class="text-danger" *ngIf="hasError('email', 'email')">
+            Email invalido
+        </div>        
+        
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+<!-- FORMULARIO A PARTIR DE PLANTILLA
+<form #myForm="ngForm" (ngSubmit)="enviar()">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="email" class="form-control" id="name" aria-describedby="emailHelp" [(ngModel)] = "user.name" required/>
+        <div id="namelHelp" class="form-text">
+            We'll never share your email with anyone else.
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)] = "user.email"  required/>
+        <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+-->

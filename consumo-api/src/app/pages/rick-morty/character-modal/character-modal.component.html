@@ -1,0 +1,11 @@
+<div class="modal-overlay" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <button class="close-btn" (click)="closeModal()">X</button>
+        <img [src]="character?.image" alt="" class="modal-image">
+        <h2>{{ character?.name }}</h2>
+        <p><strong>Status:</strong> {{ character?.status }}</p>
+        <p><strong>Species:</strong> {{ character?.species }}</p>
+        <p><strong>Gender:</strong> {{ character?.gender }}</p>
+        <p><strong>Origin:</strong> {{ character?.origin?.name }}</p>
+    </div>
+</div>
