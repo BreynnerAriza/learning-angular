@@ -1,0 +1,45 @@
+.todo__form {
+    margin: 1rem 0px;
+    padding: 1rem;
+    background-color: #ffffff05;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+}
+
+.form__group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+label{
+    font-size: .9rem;
+}
+
+input{
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #29292F;
+    padding: .4rem;
+    color: #DADADA;
+}
+
+button{
+    background-color: transparent;
+    border: 1px solid #ffffff90;
+    color: white;
+    height: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .3s;
+    border-radius: 6px;
+}
+
+button:hover{
+    background-color: #29292f;
+}

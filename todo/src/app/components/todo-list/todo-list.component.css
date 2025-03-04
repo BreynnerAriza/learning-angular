@@ -1,0 +1,6 @@
+.todo__list{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    overflow-y: auto;
+}

@@ -1,0 +1,12 @@
+<div *ngIf="todo" class="todo">
+    <div class="top">
+        <p *ngIf="todo.createdAt"> {{ todo.createdAt | date:'dd, MM, yyyy'  }}</p>
+        <button type="button" (click)="removeTodo()"><i class='bx bxs-trash'></i></button>
+    </div>
+
+    <div class="bottom">
+        <span> {{ todo.description }}</span>
+        <!-- AGREGAR DROPDOWN -->
+    </div>
+
+</div>

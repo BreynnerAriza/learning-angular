@@ -1,0 +1,12 @@
+<form (ngSubmit)="newTodo()" class="todo__form">
+
+    <h2>Nueva tarea</h2>
+
+    <div class="form__group">
+        <label for="description">Descripción: </label>
+        <input type="text" name="description" id="description" [(ngModel)]="newTodoDescription" autocomplete="off">
+    </div>
+
+    <button type="submit">Agregar tarea</button>
+
+</form>

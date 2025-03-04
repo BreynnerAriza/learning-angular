@@ -1,0 +1,46 @@
+.todo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    border: 1px solid #29292f;
+    padding: 1rem;
+    color: #dadada;
+    line-height: 29px;
+}
+
+.todo .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.todo .top p{
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.todo .top button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    transition: .3s;
+    font-size: 1.2rem;
+    color: #ff0101;
+}
+
+.todo .top button:hover{
+    transform: scale(1.2) translateY(-3px);
+    color: #e40000;
+}
+
+.todo .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo span{
+    font-size: 1.1rem;
+}
